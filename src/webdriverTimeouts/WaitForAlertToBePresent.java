@@ -17,7 +17,7 @@ public class WaitForAlertToBePresent {
         driver.manage().window().maximize();
         driver.get("file:///E:/waitforalert.html");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//input[@name='fname']")).sendKeys("My Name");
+        driver.findElement(By.xpath("//input[@name='fnamegdtg']")).sendKeys("My Name");
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.alertIsPresent());
         String alrt = driver.switchTo().alert().getText();
